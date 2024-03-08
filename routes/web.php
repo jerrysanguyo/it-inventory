@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\adminDashboardController;
 use App\Http\Controllers\encoder\encoderDashboardController;
 use App\Http\Controllers\unauthorizedAccessController;
+use App\Http\Controllers\admin\accountsController;
 use App\Http\Middleware\admin\adminRole;
 use App\Http\Middleware\encoder\encoderRole;
 
@@ -27,6 +28,8 @@ Auth::routes();
 
 Route::middleware(['auth', adminRole::class])->group(function () {
     Route::get('/dashboard-admin', [adminDashboardController::class, 'index'])->name('dashboard-admin');
+    Route::get('/accounts', [accountsController::class, 'index'])->name('account-list');
+    Route::get('accounts-data', 'admin\AccountsController@accountsData')->name('accounts.data');
 });
 
 Route::middleware(['auth', encoderRole::class])->group(function () {

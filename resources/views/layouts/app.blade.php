@@ -42,14 +42,14 @@
                                 <a href="#" class="nav-link active">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Accounts</a>
+                                <a href="{{ route('account-list') }}" class="nav-link">Accounts</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     CMS for types
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#" class="dropdown-item">Action</a></li>
+                                    <li><a href="" class="dropdown-item">Action</a></li>
                                     <li><a href="#" class="dropdown-item">Category</a></li>
                                     <li><a href="#" class="dropdown-item">Something</a></li>
                                 </ul>
