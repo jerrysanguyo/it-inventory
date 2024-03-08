@@ -21,7 +21,7 @@ use App\Http\Middleware\encoder\encoderRole;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Auth::routes();
 
